@@ -1,0 +1,53 @@
+if [[ ! -e ~/bin/antibody || -z "$(print ~/bin/antibody(Nmd-7))" ]]; then
+	print 'installing or updating antibody'
+	curl -sfL git.io/antibody | sh -s - -b ~/bin
+fi
+path=($HOME/bin $path)
+
+ANTIBODY_HOME="$(antibody home)"
+AUTOUPDATE_ANTIBODY_DAYS=1
+AUTOUPDATE_ANTIBODY_RESTART="true"
+DISABLE_AUTO_UPDATE="true"
+ZSH="$(antibody path ohmyzsh/oh-my-zsh)"
+ZSH_THEME=agnoster
+
+export SDKMAN_DIR="$HOME/.sdkman"
+export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
+export NVM_AUTO_USE=true
+export NVM_LAZY_LOAD=true
+
+if [[ ! -e ~/.zsh_plugins.sh || ~/.zsh_plugins.sh -ot ~/.zshrc || ! -e $ANTIBODY_HOME ]]; then
+	print 'Generating new antigen bundle'
+	antibody update
+	antibody bundle > ~/.zsh_plugins.sh <<- EOF
+		ohmyzsh/oh-my-zsh
+		ohmyzsh/oh-my-zsh path:plugins/colored-man-pages
+		ohmyzsh/oh-my-zsh path:plugins/colorize
+		ohmyzsh/oh-my-zsh path:plugins/dirhistory
+		ohmyzsh/oh-my-zsh path:plugins/docker-compose
+		ohmyzsh/oh-my-zsh path:plugins/git
+		ohmyzsh/oh-my-zsh path:plugins/gradle
+		ohmyzsh/oh-my-zsh path:plugins/helm
+		ohmyzsh/oh-my-zsh path:plugins/history-substring-search
+		ohmyzsh/oh-my-zsh path:plugins/kubectl
+		ohmyzsh/oh-my-zsh path:plugins/pass
+		joke/zsh path:history-pattern-search
+		joke/zsh path:completion-ignore-parents
+		joke/zsh path:autoupdate-antibody
+#		joke/zsh path:nvm-use-hook
+#		nvm-sh/nvm path:nvm.sh
+#		lukechilds/zsh-nvm
+#		cda0/zsh-tfenv
+#		denysdovhan/spaceship-prompt
+#		matthieusb/zsh-sdkman		
+	EOF
+fi
+zmodload zsh/zprof
+source ~/.zsh_plugins.sh
+
+# aliases
+alias -g ':G=| egrep -i'
+alias -g ':g=| egrep'
+
+setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histlexwords histnostore histreduceblanks noincappendhistory numericglobsort rcexpandparam rematchpcre extendedglob
+
