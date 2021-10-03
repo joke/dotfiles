@@ -1,0 +1,37 @@
+[user]
+	email = {{ .email | quote }}
+	name = Joke de Buhr
+	signingkey = 0x86AA80787A77AAD9
+[commit]
+	gpgSign = true
+[pull]
+	rebase = true
+[alias]
+	loggs = log --graph --stat
+	pushf = push --force-if-includes
+[log]
+	decorate = true
+	follow = true
+	showSignature = true
+[merge]
+	autoStash = true
+	verifySignatures
+[diff]
+	algorithm = histogram
+[push]
+        default = current
+	followTags = true
+	useForceIfIncludes = true
+[rebase]
+	stat = true
+	autoSquash = true
+	autoStash = true
+	abbreviateCommands = true
+[submodule]
+	recurse = true
+[tag]
+	gpgSign	= true
+
+[init]
+	defaultBranch = main
+	templateDir = {{ .chezmoi.homeDir }}/.git-template
