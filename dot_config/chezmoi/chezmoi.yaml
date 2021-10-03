@@ -2,4 +2,5 @@
 git:
   autoCommit:  true
   autoPush: true
-
+data:
+  email: joke@xckk.de
