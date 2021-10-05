@@ -1,6 +1,6 @@
-git:
-  autoCommit:  true
-  autoPush: true
 {{- $email := promptString "email" -}}
+git:
+  autoCommit: true
+  autoPush: true
 data:
   email: {{ $email | quote }}
