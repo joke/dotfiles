@@ -1,6 +1,6 @@
 argocd 2.1.1
 asciidoctorj 2.5.2
-chezmoi 2.4.0
+chezmoi 2.6.1
 crossplane-cli 1.4.1
 flux2 0.16.2
 github-cli 2.0.0
