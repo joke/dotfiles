@@ -5,3 +5,4 @@
 for plugin in $(cut -f1 '-d ' ~/.tool-versions); do
   asdf plugin add "$plugin"
 done
+exit 0
