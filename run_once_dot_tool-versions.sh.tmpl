@@ -5,15 +5,15 @@
 installed="$(asdf plugin list)"
 wanted="$(cut -f1 '-d ' ~/.tool-versions)"
 
-for plugin in $wanted; do
-  if [ "${installed#*$plugin}" == "$installed" ]; then
-    asdf plugin add $plugin
+for plugin in $installed; do
+  if [ "${wanted#*$plugin}" = "$wanted" ]; then
+    asdf plugin remove $plugin
   fi
 done
 
-for plugin in $installed; do
-  if [ "${installed#*$plugin}" == "$wanted" ]; then
-    asdf plugin remove $plugin
+for plugin in $wanted; do
+  if [ "${installed#*$plugin}" = "$installed" ]; then
+    asdf plugin add $plugin
   fi
 done
 
