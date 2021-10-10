@@ -1,5 +1,4 @@
 zmodule asdf
-zmodule asciiship
 zmodule completion
 zmodule duration-info
 zmodule environment
@@ -8,9 +7,8 @@ zmodule git-info
 zmodule input
 zmodule termtitle
 zmodule utility
+zmodule spaceship-prompt/spaceship-prompt --name spaceship
 zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-completions
 zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-syntax-highlighting
-zmodule ohmyzsh/ohmyzsh -f plugins/dotenv -s plugins/dotenv/dotenv.plugin.zsh
-zmodule ohmyzsh/ohmyzsh -f plugins/kubectl -s plugins/kubectl/kubectl.plugin.zsh
