@@ -1,17 +1,3 @@
-# Start configuration added by Zim install {{{
-#
-# User configuration sourced by interactive shells
-#
-
-# -----------------
-# Zsh configuration
-# -----------------
-
-#
-# History
-#
-
-# Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
 
 #
@@ -36,6 +22,7 @@ WORDCHARS=${WORDCHARS//[\/]}
 
 # Use degit instead of git as the default tool to install and update modules.
 #zstyle ':zim:zmodule' use 'degit'
+zstyle ':zim' disable-version-check yes
 
 # --------------------
 # Module configuration
