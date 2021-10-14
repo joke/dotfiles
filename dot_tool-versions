@@ -19,3 +19,4 @@ lazygit 0.29
 minikube 1.23.2
 nodejs 16.11.0
 pre-commit 2.15.0
+fzf 0.27.2
