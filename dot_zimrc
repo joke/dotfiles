@@ -2,6 +2,7 @@ zmodule asdf
 zmodule completion
 zmodule duration-info
 zmodule environment
+zmodule fzf
 zmodule git
 zmodule git-info
 zmodule input
