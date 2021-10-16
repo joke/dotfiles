@@ -1,7 +1,8 @@
-#!/bin/zsh -i
+#!/bin/zsh
 
 # .zimrc: {{ include "dot_zimrc" | sha256sum }}
 
+zimfw() { source /home/joke/.zim/zimfw.zsh "${@}" }
+
 zimfw install
 zimfw update
-
