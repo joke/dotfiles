@@ -19,7 +19,6 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 source ${ZIM_HOME}/init.zsh
-
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
@@ -44,5 +43,8 @@ bindkey '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
+
+alias -g ':g=| egrep'
+alias -g ':G=| egrep -i'
 
 setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histsavenodups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob
