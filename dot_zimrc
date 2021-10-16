@@ -1,14 +1,12 @@
 zmodule asdf
 zmodule completion
-zmodule duration-info
 zmodule environment
 zmodule fzf
 zmodule git
-zmodule git-info
 zmodule input
 zmodule termtitle
 zmodule utility
-zmodule spaceship-prompt/spaceship-prompt --name spaceship
+zmodule joke/zim-starship
 zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-completions
 zmodule zsh-users/zsh-history-substring-search
