@@ -2,6 +2,8 @@
 
 # .tools-versions: {{ include "dot_tool-versions" | sha256sum }}
 
+. '{{ .chezmoi.homeDir }}/.asdf/lib/asdf.sh'
+
 installed="$(asdf plugin list)"
 wanted="$(cut -f1 '-d ' ~/.tool-versions)"
 
