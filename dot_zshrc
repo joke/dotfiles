@@ -1,5 +1,6 @@
-setopt HIST_IGNORE_ALL_DUPS
 bindkey -e
+
+export LESS=-R
 
 # Prompt for spelling correction of commands.
 #setopt CORRECT
