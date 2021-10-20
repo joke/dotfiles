@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -ex
 # .tools-versions: {{ include "dot_tool-versions" | sha256sum }}
 
 . '{{ .chezmoi.homeDir }}/.asdf/lib/asdf.sh'
