@@ -4,6 +4,6 @@ ASDF_DIR='{{ .chezmoi.homeDir }}/.asdf'
 
 if [ ! -d "$ASDF_DIR" ]; then
   git clone https://github.com/asdf-vm/asdf.git "$ASDF_DIR"
-  LATEST="$(git -C '${ASDF_DIR}' describe --abbrev=0 --tags)"
+  LATEST="$(git -C "${ASDF_DIR}" describe --abbrev=0 --tags)"
   git -C "${ASDF_DIR}" checkout "$LATEST" --
 fi
