@@ -12,10 +12,10 @@ export LESS=-R
 WORDCHARS=${WORDCHARS//[\/]}
 
 zstyle ':zim' disable-version-check yes
-
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${HOME}/.zimrc ]]; then
   # Update static initialization script if it does not exist or it's outdated, before sourcing it
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi

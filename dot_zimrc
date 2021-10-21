@@ -1,6 +1,7 @@
 zmodule asdf
 zmodule completion
 zmodule environment
+zmodule fzf
 zmodule git
 zmodule input
 zmodule termtitle
