@@ -1,37 +1,60 @@
 [user]
-	email = {{ .email | quote }}
-	name = Joke de Buhr
-	signingkey = 0x86AA80787A77AAD9
+        email = "{{ .email }}"
+        name = Joke de Buhr
+        signingkey = 0x86AA80787A77AAD9
 [commit]
-	gpgSign = true
+        gpgSign = true
 [pull]
-	rebase = true
+        rebase = interactive
 [alias]
-	loggs = log --graph --stat
-	pushf = push --force-if-includes
+        loggs = log --graph --stat
+        pushf = push --force-if-includes
 [log]
-	decorate = true
-	follow = true
-	showSignature = true
+        decorate = auto
+        follow = true
+        showSignature = true
 [merge]
-	autoStash = true
-	verifySignatures
+        autoStash = true
+        verifySignatures = true
+        log = true
+        directoryRenames = true
 [diff]
-	algorithm = histogram
+        algorithm = histogram
+        renames = copies
 [push]
         default = current
-	followTags = true
-	useForceIfIncludes = true
+        followTags = true
+        useForceIfIncludes = true
+        recurseSubmodules = on-demand
 [rebase]
-	stat = true
-	autoSquash = true
-	autoStash = true
-	abbreviateCommands = true
+        stat = true
+        autoSquash = true
+        autoStash = true
+        abbreviateCommands = true
 [submodule]
-	recurse = true
+        recurse = true
 [tag]
-	gpgSign	= true
-
+        gpgSign = true
+[branch]
+        autoSetupRebase = remote
+[checkout]
+        defaultRemote = origin
 [init]
-	defaultBranch = main
-	templateDir = {{ .chezmoi.homeDir }}/.git-template
+        defaultBranch = main
+        templateDir = {{ .chezmoi.homeDir }}/.git-template
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+[rerere]
+        enabled = true
+        autoUpdate = true
+[grep]
+        lineNumber = true
+        patternType = perl
+[fetch]
+        recurseSubmodules = on-demand
+        prune = true
+        pruneTags = true
+        writeCommitGraph = true
