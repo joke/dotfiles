@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd '{{ .chezmoi.homeDir }}'
+exec git remote set-url origin git@github.com:joke/dotfiles.git
