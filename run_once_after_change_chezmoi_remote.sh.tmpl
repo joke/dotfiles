@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd '{{ .chezmoi.homeDir }}'
+cd '{{ .chezmoi.sourceDir }}'
 exec git remote set-url origin git@github.com:joke/dotfiles.git
