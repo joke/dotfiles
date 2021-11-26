@@ -1,6 +1,7 @@
 bindkey -e
 
 export LESS=-R
+export EDITOR=vim
 
 # Prompt for spelling correction of commands.
 #setopt CORRECT
