@@ -6,4 +6,3 @@ ControlMaster auto
 ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
 ControlPersist 1800
 ForwardAgent yes
-RemoteForward ${XDG_RUNTIME_DIR}/S.gpg-agent.extra ${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.extra
