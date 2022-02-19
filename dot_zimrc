@@ -10,4 +10,3 @@ zmodule joke/zim-kubectl
 zmodule joke/zim-starship
 zmodule zsh-users/zsh-completions
 zmodule zsh-users/zsh-history-substring-search
-zmodule zsh-users/zsh-syntax-highlighting
