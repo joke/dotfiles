@@ -8,7 +8,7 @@ fd 8.2.1
 flux2 0.22.1
 fzf 0.28.0
 github-cli 2.2.0
-gopass 1.13.1
+gopass 1.14.0
 helm 3.7.1
 istioctl 1.11.4
 java graalvm-21.3.0+java17
