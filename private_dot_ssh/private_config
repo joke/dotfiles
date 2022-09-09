@@ -1,0 +1,9 @@
+Host github.com
+ForwardAgent no
+
+Host *
+ControlMaster auto
+ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
+ControlPersist 1800
+ForwardAgent yes
+StrictHostKeychecking accept-new

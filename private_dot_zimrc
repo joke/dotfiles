@@ -1,0 +1,21 @@
+zmodule environment
+zmodule git
+zmodule input
+zmodule termtitle
+zmodule asdf
+zmodule utility
+zmodule joke/zim-chezmoi
+zmodule joke/zim-github-cli
+zmodule joke/zim-gopass
+zmodule joke/zim-helm
+zmodule joke/zim-istioctl
+zmodule joke/zim-kn
+zmodule joke/zim-kubectl
+zmodule joke/zim-starship
+zmodule joke/zim-steampipe
+zmodule joke/zim-yq
+zmodule completion
+zmodule zsh-users/zsh-completions --fpath src
+#zmodule zsh-users/zsh-syntax-highlighting
+#zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-history-substring-search

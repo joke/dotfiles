@@ -1,0 +1,11 @@
+{{ $email := promptString "email" -}}
+
+data:
+  email: {{ $email | quote }}
+
+encryption: gpg
+format: yaml  
+git:
+  autoAdd: true
+  autoCommit: true  
+  autoPush: true

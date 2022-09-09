@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+gpg --receive-keys 7F827DD2737CE0B146FE632A86AA80787A77AAD9

@@ -1,0 +1,62 @@
+[user]
+        email = {{ .email | quote }}
+        name = Joke de Buhr
+        signingkey = 0x86AA80787A77AAD9
+[commit]
+        gpgSign = true
+[pull]
+        rebase = interactive
+[alias]
+        loggs = log --graph --stat
+        pushf = push --force-if-includes
+[log]
+        decorate = auto
+        follow = true
+#        showSignature = true
+[merge]
+        autoStash = true
+        log = true
+        directoryRenames = true
+[diff]
+        algorithm = histogram
+        renames = copies
+[push]
+        default = current
+        followTags = true
+        useForceIfIncludes = true
+        recurseSubmodules = on-demand
+[rebase]
+        stat = true
+        autoSquash = true
+        autoStash = true
+        abbreviateCommands = true
+[submodule]
+        recurse = true
+[tag]
+        gpgSign = true
+[branch]
+        autoSetupRebase = remote
+[checkout]
+        defaultRemote = origin
+        guess = true
+[init]
+        defaultBranch = main
+        templateDir = {{ print .chezmoi.homeDir "/.git-template" | quote }}
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+[rerere]
+        enabled = true
+        autoUpdate = true
+[grep]
+        lineNumber = true
+        patternType = perl
+[fetch]
+        recurseSubmodules = on-demand
+        prune = true
+        pruneTags = true
+        writeCommitGraph = true
+[advice]
+        skippedCherryPicks = false

@@ -1,0 +1,24 @@
+bindkey -e
+
+export LESS=-R
+export EDITOR=vim
+
+zstyle ':zim' disable-version-check yes
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
+
+# ------------------
+# Initialize modules
+# ------------------
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+source ${ZIM_HOME}/init.zsh
+source $ASDF_DIR/plugins/java/set-java-home.zsh
+source ${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc
+
+alias -g ':G=| egrep'
+alias -g ':g=| egrep -i'
+alias -g ':y=| yq'
+alias -g ':j=| jq'
+
+setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histsavenodups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
+

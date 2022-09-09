@@ -1,0 +1,10 @@
+#!/bin/zsh
+# .zimrc: {{ include "private_dot_zimrc" | sha256sum }}
+# zimfw.zsh: {{ include ( print .chezmoi.homeDir "/.zim/zimfw.zsh" ) | sha256sum }}
+set -e
+
+zimfw() { source '{{ .chezmoi.homeDir }}/.zim/zimfw.zsh' "${@}" }
+
+zimfw uninstall -q
+zimfw install
+zimfw update

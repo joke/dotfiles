@@ -1,0 +1,20 @@
+.asdf:
+  type: git-repo
+  url: git@github.com:asdf-vm/asdf.git
+  refreshPeriod: 168h
+.zim:
+  type: git-repo
+  url: git@github.com:zimfw/zimfw.git
+  refreshPeriod: 168h
+.local/share/fonts/NerdFonts/JetBrainsMono:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
+  exclude:
+    - '*Windows Compatible*'
+    - '*Complete Mono*'
+.local/share/fonts/NerdFonts/SourceCodePro:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/SourceCodePro.zip
+  exclude:
+    - '*Windows Compatible*'
+    - '*Complete Mono*'
