@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+export PATH="$HOME/.local/bin:$PATH"
+
+echo "$(tput setaf 2 bold)****************************** -> setup dotfiles $(tput sgr0)"
+
+mkdir -m go= -p "$HOME/.ssh"
+rm -rf "$HOME/.ssh/known_hosts"
+ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
+
+ARGS="init joke --apply"
+[ -n "$SSH_CONNECTION" ] && ARGS="$ARGS --ssh"
+
+export BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
+#trap "rm -rf -- '$BINDIR'" EXIT
+
+sh -c "$(curl -fsLS https://get.chezmoi.io)" -- $ARGS
+
+echo "$(tput setaf 2 bold)****************************** <- setup dotfiles $(tput sgr0)"
