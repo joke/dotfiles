@@ -1,2 +1,0 @@
-export ASDF_DIRENV_BIN="{{ output (print .chezmoi.homeDir "/.asdf/bin/asdf") "which" "direnv" | trim }}"
-eval "$($ASDF_DIRENV_BIN hook zsh)"
