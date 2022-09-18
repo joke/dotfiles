@@ -7,3 +7,4 @@ ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
 ControlPersist 1800
 ForwardAgent yes
 StrictHostKeychecking accept-new
+RemoteForward /tmp/.gpg.forward.socket ${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent
