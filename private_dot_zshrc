@@ -13,7 +13,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 ZIM_HOME=${ZDOTDIR:-$HOME}/.zim
 source $ZIM_HOME/init.zsh
 source $ASDF_DIR/plugins/java/set-java-home.zsh
-source $$HOME/.config/asdf-direnv/zshrc
+source $$HOME/.config/asdf-direnv.zshrc
 
 alias -g ':G=| egrep'
 alias -g ':g=| egrep -i'
