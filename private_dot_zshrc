@@ -10,15 +10,17 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 # ------------------
 # Initialize modules
 # ------------------
-ZIM_HOME=${ZDOTDIR:-$HOME}/.zim
-source $ZIM_HOME/init.zsh
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+source ${ZIM_HOME}/init.zsh
 source $ASDF_DIR/plugins/java/set-java-home.zsh
-source $$HOME/.config/asdf-direnv.zshrc
+source ${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc
 
 alias -g ':G=| egrep'
 alias -g ':g=| egrep -i'
+for i ({1..10}) { alias -g ":c$i=| cut -f $i '-d '" }
+alias -g ':l1=| tail -n1'
 alias -g ':y=| yq'
-alias -g ':j=| jq'
+alias -g ':64=| base64 -d'
 
 setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histsavenodups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
 
