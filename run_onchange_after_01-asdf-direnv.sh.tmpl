@@ -1,0 +1,8 @@
+#!/bin/sh
+# .tools-versions: {{ include "dot_tool-versions" | sha256sum }}
+set -e
+
+. '{{ .chezmoi.homeDir }}/.asdf/asdf.sh'
+
+asdf exec direnv hook zsh > '{{ .chezmoi.homeDir }}/.config/asdf-direnv/zshrc'
+
