@@ -4,6 +4,7 @@ export LESS=-R
 export EDITOR=vim
 
 zstyle ':zim' disable-version-check yes
+HISTFILE=$HOME/.zhistory
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 
