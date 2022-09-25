@@ -6,6 +6,9 @@
   type: git-repo
   url: git@github.com:zimfw/zimfw.git
   refreshPeriod: 168h
+.local/share/gopass/stores:
+  type: git-repo
+  url: git@github.com:joke/gopass.git
 .local/share/fonts/NerdFonts/JetBrainsMono:
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
