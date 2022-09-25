@@ -1,7 +1,11 @@
 {{ $email := promptString "email" "joke@xckk.de" -}}
+{{ $group:= promptString "group: e.g. home, work" "home" -}}
+{{ $trusted:= promptBool "is this node trusted" false -}}
 
 data:
   email: {{ $email | quote }}
+  group: {{ $group| quote }}
+  trusted: {{ $trusted }}
 
 encryption: gpg
 format: yaml  
