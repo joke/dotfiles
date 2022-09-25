@@ -9,8 +9,10 @@ zmodule joke/zim-github-cli
 zmodule joke/zim-gopass
 zmodule joke/zim-helm
 zmodule joke/zim-istioctl
+zmodule joke/zim-k9s
 zmodule joke/zim-kn
 zmodule joke/zim-kubectl
+zmodule joke/zim-minikube
 zmodule joke/zim-starship
 zmodule joke/zim-steampipe
 zmodule joke/zim-yq
