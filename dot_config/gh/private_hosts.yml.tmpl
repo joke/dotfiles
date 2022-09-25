@@ -1,4 +1,8 @@
 github.com:
     user: joke
+{{ if .trusted }}
     oauth_token: {{ gopass "token/github/github-cli"  }}
+{{ else }}
+    oauth_token: {{ gopass "token/github/github-cli-read"  }}
+{{ end }}
     git_protocol: ssh
