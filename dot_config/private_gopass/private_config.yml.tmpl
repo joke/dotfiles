@@ -7,4 +7,9 @@ notifications: true
 parsing: true
 path: {{ .chezmoi.homeDir }}/.local/share/gopass/stores/root
 safecontent: false
+{{ if .work "darwin" }}
+mounts:
+  eventim: {{ .chezmoi.homeDir }}/.local/share/gopass/stores/eventim
+{{ else }}
 mounts: {{ "{}" }}
+{{ fi }}
