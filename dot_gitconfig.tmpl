@@ -15,21 +15,23 @@
 #        showSignature = true
 [merge]
         autoStash = true
-        log = true
         directoryRenames = true
+        log = true
 [diff]
         algorithm = histogram
         renames = copies
 [push]
+        autoSetupRemote = true
         default = current
         followTags = true
-        useForceIfIncludes = true
         recurseSubmodules = on-demand
+        useForceIfIncludes = true
 [rebase]
-        stat = true
+        abbreviateCommands = true
         autoSquash = true
         autoStash = true
-        abbreviateCommands = true
+        stat = true
+        updateRefs = true
 [submodule]
         recurse = true
 [tag]
@@ -60,3 +62,7 @@
         writeCommitGraph = true
 [advice]
         skippedCherryPicks = false
+[status]
+       showStash = true
+       renames = copy
+
