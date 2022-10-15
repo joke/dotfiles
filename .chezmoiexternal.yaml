@@ -21,3 +21,6 @@
   exclude:
     - '*Windows Compatible*'
     - '*Complete Mono*'
+.local/share/fonts/NotoColorEmoji:
+  type: archive
+  url: 'https://fonts.google.com/download?family=Noto%20Color%20Emoji'
