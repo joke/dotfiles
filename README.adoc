@@ -1,3 +1,8 @@
 = dotfiles
 
 Personal dotfiles managed with https://www.chezmoi.io[chezmoi].
+
+[source,bash]
+----
+curl -fsLS https://joke.github.io/dotfiles/ | sh
+----
