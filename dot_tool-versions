@@ -12,7 +12,7 @@ k9s 0.26.3
 kn 1.7.0
 krew 0.4.3
 kubectl 1.25.0
-kubie 0.19.0
+kubie 0.19.1
 minikube 1.27.0
 pre-commit 2.20.0
 starship 1.11.0
