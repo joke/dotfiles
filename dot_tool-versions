@@ -1,5 +1,5 @@
 awscli 2.7.33
-chezmoi 2.27.2
+chezmoi 2.27.3
 direnv 2.32.1
 fzf 0.33.0
 github-cli 2.15.0
@@ -15,6 +15,8 @@ kubie 0.19.1
 minikube 1.27.0
 pre-commit 2.20.0
 skaffold 2.0.2
+sops 3.7.3
+age 1.0.0
 starship 1.10.3
 steampipe 0.16.4
 terraform 1.2.9
