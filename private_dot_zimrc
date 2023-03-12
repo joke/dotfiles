@@ -2,8 +2,8 @@ zmodule environment
 zmodule git
 zmodule input
 zmodule termtitle
-zmodule asdf
 zmodule utility
+zmodule joke/zim-rtx
 zmodule joke/zim-chezmoi
 zmodule joke/zim-github-cli
 zmodule joke/zim-gopass
@@ -13,6 +13,7 @@ zmodule joke/zim-k9s
 zmodule joke/zim-kn
 zmodule joke/zim-kubectl
 zmodule joke/zim-minikube
+zmodule joke/zim-skaffold
 zmodule joke/zim-starship
 zmodule joke/zim-steampipe
 zmodule joke/zim-yq
