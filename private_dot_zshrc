@@ -14,8 +14,8 @@ path=(~/bin $path)
 # ------------------
 source $HOME/.zim/init.zsh
 
-alias -g ':G=| egrep'
-alias -g ':g=| egrep -i'
+alias -g ':G=| grep -E'
+alias -g ':g=| grep -E -i'
 for i ({1..10}) { alias -g ":c$i=| cut -f $i '-d '" }
 alias -g ':l1=| tail -n1'
 alias -g ':y=| yq'
