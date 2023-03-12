@@ -1,7 +1,3 @@
-.asdf:
-  type: git-repo
-  url: git@github.com:asdf-vm/asdf.git
-  refreshPeriod: 168h
 .zim:
   type: git-repo
   url: git@github.com:zimfw/zimfw.git
