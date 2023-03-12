@@ -8,12 +8,11 @@ HISTFILE=$HOME/.zhistory
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 
+path=(~/bin $path)
 # ------------------
 # Initialize modules
 # ------------------
-source ${ZIM_HOME:-$HOME/.zim}/init.zsh
-source $ASDF_DIR/plugins/java/set-java-home.zsh
-source $HOME/.config/asdf-direnv.zshrc
+source $HOME/.zim/init.zsh
 
 alias -g ':G=| egrep'
 alias -g ':g=| egrep -i'
