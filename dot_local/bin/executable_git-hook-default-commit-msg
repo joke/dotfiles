@@ -1,0 +1,6 @@
+#!/bin/sh
+[ ! -e .pre-commit-config.yaml ] && exit 0
+
+HOOK_TYPE="${0#*/hooks/}"
+HOOK_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec pre-commit hook-impl --hook-dir "$HOOK_DIR" --hook-type "$HOOK_TYPE" -- "$@"
