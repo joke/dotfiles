@@ -1,9 +1,0 @@
-[Unit]
-Description=Monitor gpg forward socket 
-
-[Path]
-PathExists=/tmp/%u.gpg.forward.socket
-Unit=gpg-forwarded-sockets.service
-
-[Install]
-WantedBy=default.target
