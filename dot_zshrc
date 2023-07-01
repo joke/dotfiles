@@ -1,0 +1,23 @@
+bindkey -e
+
+export LESS=-R
+export EDITOR=vim
+
+zstyle ':zim' disable-version-check yes
+HISTFILE=$HOME/.zhistory
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
+
+# ------------------
+# Initialize modules
+# ------------------
+source $HOME/.zim/init.zsh
+
+alias -g ':G=| grep -E'
+alias -g ':g=| grep -E -i'
+for i ({1..10}) { alias -g ":c$i=| cut -f $i '-d '" }
+alias -g ':l1=| tail -n1'
+alias -g ':y=| yq'
+alias -g ':64=| base64 -d'
+
+setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histsavenodups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
