@@ -1,4 +1,9 @@
+
+if [ -n "$HOME/.ssh" ]; then
+    mkdir -m go= -p "$HOME/.ssh"
+    ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
+fi
+
 tmpdir="$(mktemp -d)"
 #trap 'rm -rf -- "${tmpdir}"' EXIT INT TERM
-
 sh -c "$(curl -fsLS https://chezmoi.io/get)" -- -b "$tmpdir" init --apply joke
