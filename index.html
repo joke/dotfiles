@@ -1,7 +1,9 @@
-
 if [ ! -e "$HOME/.ssh" ]; then
     mkdir -m go= -p "$HOME/.ssh"
-    ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
+fi
+
+if [ ! -e "$HOME/.ssh/known_hosts" ]; then
+   ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 fi
 
 tmpdir="$(mktemp -d)"
