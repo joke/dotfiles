@@ -1,5 +1,5 @@
 
-if [ -n "$HOME/.ssh" ]; then
+if [ ! -e "$HOME/.ssh" ]; then
     mkdir -m go= -p "$HOME/.ssh"
     ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 fi
