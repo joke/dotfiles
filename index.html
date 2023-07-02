@@ -6,6 +6,11 @@ if [ ! -e "$HOME/.ssh/known_hosts" ]; then
    ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 fi
 
+ARGS="-b '$tmpdir' init joke --apply"
+if [ -e "$SSH_TTY" ]; then
+    ARGS="$ARGS --ssh"
+fi
+
 tmpdir="$(mktemp -d)"
 #trap 'rm -rf -- "${tmpdir}"' EXIT INT TERM
-sh -c "$(curl -fsLS https://chezmoi.io/get)" -- -b "$tmpdir" init --apply joke
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- $ARGS
