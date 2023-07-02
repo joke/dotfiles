@@ -1,4 +1,3 @@
-BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
 
 if [ ! -e "$HOME/.ssh" ]; then
     echo "@@@@@@@@@@@ Creating ssh config directory" >&2
@@ -17,9 +16,11 @@ if [ -e "$SSH_TTY" ]; then
 fi
 
 echo "@@@@@@@@@@@ Starting chezmoi" >&2
+export BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
 sh -c "$(curl -fsLS https://chezmoi.io/get)" $ARGS
+rm -rf -- "$BINDIR"
+unset BINDIR
 echo "@@@@@@@@@@@ Finished chezmoi" >&2
 
-rm -rf -- "$BINDIR"
 echo "@@@@@@@@@@@ Restarting shell" >&2
 exec zsh
