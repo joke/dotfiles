@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# zimfw master ref: {{ include ".git/modules/external_dot_zim/refs/heads/master" }}
+# .zimrc: {{ include "dot_zimrc" | sha256sum }}
+
+zimfw() { source '{{ .chezmoi.homeDir }}/.zim/zimfw.zsh' "${@}" }
+zimfw uninstall -q
+zimfw install
+zimfw update
