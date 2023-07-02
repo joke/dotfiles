@@ -2,7 +2,7 @@
 
 Personal dotfiles managed with https://www.chezmoi.io[chezmoi].
 
-[source,bash]
+[source,zsh]
 ----
-curl -fsLS https://joke.github.io/dotfiles/ | sh
+. <(curl -fsLS https://joke.github.io/dotfiles/)
 ----
