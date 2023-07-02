@@ -44,7 +44,7 @@
         guess = true
 [init]
         defaultBranch = main
-        templateDir = "/home/joke/.git-template"
+        templateDir = {{ print .chezmoi.homeDir "/.git-template" | quote }}
 [filter "lfs"]
         required = true
         clean = git-lfs clean -- %f
