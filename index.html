@@ -1,5 +1,4 @@
 tmpdir="$(mktemp -d)"
-trap 'rm -rf -- "${tmpdir}"' EXIT
-trap 'exit' INT TERM
+#trap 'rm -rf -- "${tmpdir}"' EXIT INT TERM
 
 sh -c "$(curl -fsLS https://chezmoi.io/get)" -- -b "$tmpdir" init --apply joke
