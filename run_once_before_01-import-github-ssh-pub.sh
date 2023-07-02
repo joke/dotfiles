@@ -1,5 +1,9 @@
 #!/bin/sh
-set -e
+set -ex
 
-mkdir -m go= -p .ssh
-ssh-keyscan github.com 2>/dev/null > '.ssh/known_hosts'
+echo "@1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" >&2
+
+mkdir -m go= -p "$HOME/.ssh"
+ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
+
+echo "@1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" >&2
