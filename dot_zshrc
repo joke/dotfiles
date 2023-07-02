@@ -8,6 +8,8 @@ HISTFILE=$HOME/.zhistory
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 
+path=(~/.local/bin $path)
+
 # ------------------
 # Initialize modules
 # ------------------
