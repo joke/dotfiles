@@ -1,17 +1,24 @@
+
 if [ ! -e "$HOME/.ssh" ]; then
+    echo "@@@@@@@@@@@ Creating .ssh"
     mkdir -m go= -p "$HOME/.ssh"
 fi
 
 if [ ! -e "$HOME/.ssh/known_hosts" ]; then
+    echo "@@@@@@@@@@@ Importing github key" 
    ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 fi
 
 ARGS="-b '$tmpdir' init joke --apply"
 if [ -e "$SSH_TTY" ]; then
+    echo "@@@@@@@@@@@ Cloning via ssh"
     ARGS="$ARGS --ssh"
 fi
 
 tmpdir="$(mktemp -d)"
 #trap 'rm -rf -- "${tmpdir}"' EXIT INT TERM
+
+echo "@@@@@@@@@@@ Starting chezmoi"
 sh -c "$(curl -fsLS https://chezmoi.io/get)" -- $ARGS
-exec "zsh"
+echo "@@@@@@@@@@@ Finished chezmoi"
+exec zsh
