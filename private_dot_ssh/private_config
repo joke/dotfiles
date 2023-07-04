@@ -2,6 +2,7 @@ Host github.com
 ForwardAgent no
 
 Host *
+AddKeysToAgent yes
 ControlMaster auto
 ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
 ControlPersist 1800
