@@ -7,6 +7,6 @@ Type=oneshot
 Nice=19
 IOSchedulingClass=2
 IOSchedulingPriority=7
-ExecStart=%h/.local/bin/rtx exec chezmoi -- chezmoi update -a -v -v -k --no-tty
+ExecStart=%h/.local/bin/rtx exec chezmoi -- chezmoi update -a -k --no-tty
 Restart=on-failure
 RestartSec=5min
