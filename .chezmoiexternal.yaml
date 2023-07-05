@@ -3,3 +3,13 @@
   url: https://rtx.pub/rtx-latest-linux-x64
   refreshPeriod: 168h
   executable: true
+.local/share/fonts/NerdFonts/JetBrainsMono:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.tar.xz
+  include:
+  - JetBrainsMonoNerdFont-*.ttf
+.local/share/fonts/NerdFonts/SourceCodePro:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/SourceCodePro.tar.xz
+  include:
+  - SauceCodeProNerdFont-*.ttf
