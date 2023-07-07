@@ -1,0 +1,16 @@
+[autosync]
+	interval = 1
+[core]
+	autoclip = true
+	autoimport = true
+	autopush = true
+	autosync = true
+	showautoclip = true
+[generate]
+	symbols	= true
+[recipients]
+	check = false
+[updater]
+	check = false
+[mounts]
+	path = /home/joke/.local/share/gopass/stores/root
