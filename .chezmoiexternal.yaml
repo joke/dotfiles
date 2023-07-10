@@ -15,4 +15,4 @@
   - SauceCodeProNerdFont-*.ttf
 .local/share/gopass/stores/root:
   type: git-repo
-  url: git@github.com:joke/gopass.git    
+  url: git@github.com:joke/gopass.git
