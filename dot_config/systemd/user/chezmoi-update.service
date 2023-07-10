@@ -7,6 +7,7 @@ Type=oneshot
 Nice=19
 IOSchedulingClass=2
 IOSchedulingPriority=7
+ExecStartPre=-/usr/bin/notify-send -i folder-sync -u low -a chezmoi -e "Syncing" "Starting background synchroniation"
 ExecStart=%h/.local/bin/rtx exec chezmoi -- chezmoi update -a -k --no-tty
 Restart=on-failure
 RestartSec=5min
