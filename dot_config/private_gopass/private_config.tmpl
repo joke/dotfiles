@@ -14,3 +14,7 @@
 	check = false
 [mounts]
 	path = /home/joke/.local/share/gopass/stores/root
+{{ if eq .group "work" }}
+[mounts "eventim"]
+	path = {{ print .chezmoi.homeDir "/.local/share/gopass/stores/eventim" }}
+{{ end }}
