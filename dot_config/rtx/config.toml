@@ -8,7 +8,7 @@ trusted_config_paths = [
 [tools]
 age = '1.1.1'
 awscli = '2.9.21'
-chezmoi = '2.34.2'
+chezmoi = '2.35.0'
 dive = '0.10.0'
 fzf = '0.37.0'
 github-cli = '2.22.1'
