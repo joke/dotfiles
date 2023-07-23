@@ -5,8 +5,12 @@ trusted_config_paths = [
     '~/Projects/joke'
 ]
 
+[plugins]
+age-plugin-yubikey = 'https://github.com/joke/asdf-age-plugin-yubikey'
+
 [tools]
 age = '1.1.1'
+age-plugin-yubikey = '0.4.0'
 asciidoctorj = '2.5.10'
 awscli = '2.9.21'
 chezmoi = '2.35.0'
@@ -32,6 +36,7 @@ pre-commit = '3.3.3'
 skaffold = '2.1.0'
 sops = '3.7.3'
 starship = '1.15.0'
+shfmt = '3.7.0'
 steampipe = '0.18.4'
 terraform = '1.5.3'
 terraform-docs = '0.16.0'
