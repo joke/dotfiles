@@ -1,3 +1,1 @@
-~/.local/bin/debug
-
 [[ -e $HOME/.local/bin ]] && path=($HOME/.local/bin $path)
