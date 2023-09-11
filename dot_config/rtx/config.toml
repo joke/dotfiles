@@ -4,6 +4,7 @@ missing_runtime_behavior = 'autoinstall'
 trusted_config_paths = [
     '~/Projects/joke'
 ]
+experimental = true
 
 [plugins]
 age-plugin-yubikey = 'https://github.com/joke/asdf-age-plugin-yubikey'
