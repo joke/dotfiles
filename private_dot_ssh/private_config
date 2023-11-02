@@ -11,4 +11,5 @@ ControlMaster auto
 ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
 ControlPersist 1800
 ForwardAgent yes
+ServerAliveInterval 60
 StrictHostKeychecking accept-new
