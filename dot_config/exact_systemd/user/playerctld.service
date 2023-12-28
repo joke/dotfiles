@@ -3,7 +3,7 @@ Description=Keep track of media player activity
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/playerctld daemon
+ExecStart=-/usr/bin/playerctld daemon
 
 [Install]
 WantedBy=graphical-session.target
