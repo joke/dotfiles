@@ -4,9 +4,6 @@ trusted_config_paths = [
 ]
 experimental = true
 
-[plugins]
-age-plugin-yubikey = 'https://github.com/joke/asdf-age-plugin-yubikey'
-
 [tools]
 age = '1.1.1'
 age-plugin-yubikey = '0.4.0'
