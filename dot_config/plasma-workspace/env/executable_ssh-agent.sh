@@ -1,1 +1,2 @@
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh"
+# revert /etc/xdg/plasma-workspace/env/ssh-agent.sh
+unset SSH_AUTH_SOCK
