@@ -1,8 +1,9 @@
 [settings]
+experimental = true
+not_found_auto_install = true
 trusted_config_paths = [
     '~/Projects/joke'
 ]
-experimental = true
 
 [tools]
 age = '1.1.1'
@@ -33,7 +34,7 @@ node = 'lts'
 pre-commit = '3.3.3'
 skaffold = '2.9.0'
 sops = '3.8.1'
-starship = '1.16.0'
+starship = '1.17.0'
 shfmt = '3.7.0'
 steampipe = '0.18.4'
 terraform = '1.6.3'
