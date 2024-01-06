@@ -1,7 +1,6 @@
-.local/bin/rtx:
+.local/bin/mise:
   type: file
-  url: https://rtx.pub/rtx-latest-linux-x64
-  refreshPeriod: 168h
+  url: https://github.com/jdx/mise/releases/download/v2024.1.7/mise-v2024.1.7-linux-x64
   executable: true
 .local/share/fonts/NerdFonts/JetBrainsMono:
   type: archive
