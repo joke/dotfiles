@@ -11,7 +11,7 @@
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/GeistMono.tar.xz
   include:
-  - '*.ttf'
+  - '*.otf'
 .local/share/fonts/NerdFonts/JetBrainsMono:
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
