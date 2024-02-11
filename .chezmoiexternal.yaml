@@ -1,15 +1,15 @@
 .local/bin/mise:
   type: file
-  url: https://github.com/jdx/mise/releases/download/v2024.1.7/mise-v2024.1.7-linux-x64
+  url: https://github.com/jdx/mise/releases/download/v2024.2.13/mise-v2024.2.13-linux-x64
   executable: true
 .local/share/fonts/NerdFonts/JetBrainsMono:
   type: archive
-  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.tar.xz
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
   include:
   - JetBrainsMonoNerdFont-*.ttf
 .local/share/fonts/NerdFonts/SourceCodePro:
   type: archive
-  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/SourceCodePro.tar.xz
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/SourceCodePro.tar.xz
   include:
   - SauceCodeProNerdFont-*.ttf
 .local/share/gopass/stores/root:
