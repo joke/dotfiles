@@ -1,9 +1,9 @@
 {
-    "name": "com.justwatch.gopass",
-    "description": "Gopass wrapper to search and return passwords",
-    "path": "{{ .chezmoi.homeDir }}/.config/gopass/gopass_wrapper.sh",
-    "type": "stdio",
-    "allowed_extensions": [
+    "name"{{ .chezmoi.pathListSeparator }} "com.justwatch.{{ .chezmoi.config.gopass.command }}",
+    "description"{{ .chezmoi.pathListSeparator }} "Gopass wrapper to search and return passwords",
+    "path"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.homeDir }}{{ .chezmoi.pathSeparator }}.config{{ .chezmoi.pathSeparator }}{{ .chezmoi.config.gopass.command }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.config.gopass.command }}_wrapper.sh",
+    "type"{{ .chezmoi.pathListSeparator }} "stdio",
+    "allowed_extensions"{{ .chezmoi.pathListSeparator }} [
         "{eec37db0-22ad-4bf1-9068-5ae08df8c7e9}"
     ]
 }
