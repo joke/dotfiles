@@ -1,5 +1,5 @@
-#!{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}sh
+#!/bin/sh
 
 export GPG_TTY="$(tty)"
-exec {{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}.local{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}{{ .chezmoi.config.gopass.command }}-jsonapi listen
+exec {{ .chezmoi.homeDir }}/.local/bin/gopass-jsonapi listen
 

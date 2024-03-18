@@ -17,5 +17,5 @@
 	autoclip = true
 {{ if eq .group "work" }}
 [mounts "eventim"]
-	path = {{ print .chezmoi.homeDir "/.local/share/gopass/stores/eventim" }}
+	path = {{ .chezmoi.homeDir }}/.local/share/gopass/stores/eventim
 {{ end }}
