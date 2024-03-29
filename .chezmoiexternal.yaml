@@ -21,7 +21,7 @@
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/SourceCodePro.tar.xz
   include:
-  - '*.ttf'
+  - 'SauceCodeProNerdFont-*.ttf'
 .local/share/gopass/stores/root:
   type: git-repo
   url: git@github.com:joke/gopass.git
