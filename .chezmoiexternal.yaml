@@ -11,17 +11,12 @@
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.tar.xz
   include:
-  - '*.ttf'
-.local/share/fonts/NerdFonts/GeistMono:
-  type: archive
-  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/GeistMono.tar.xz
-  include:
-  - '*.otf'
+  - 'FiraCodeNerdFont-*.ttf'
 .local/share/fonts/NerdFonts/JetBrainsMono:
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
   include:
-  - '*.ttf'
+  - 'JetBrainsMonoNerdFont-*.ttf'
 .local/share/fonts/NerdFonts/SourceCodePro:
   type: archive
   url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/SourceCodePro.tar.xz
