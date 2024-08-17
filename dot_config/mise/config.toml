@@ -1,5 +1,6 @@
 [settings]
 experimental = true
+not_found_auto_install = true
 trusted_config_paths = [
     '~/Projects/joke'
 ]
@@ -7,6 +8,7 @@ trusted_config_paths = [
 [tools]
 age = '1.1.1'
 age-plugin-yubikey = '0.4.0'
+apko = '0.17.0'
 asciidoctorj = '2.5.10'
 awscli = '2.13.3'
 chezmoi = '2.42.3'
