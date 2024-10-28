@@ -5,6 +5,9 @@ trusted_config_paths = [
     '~/Projects/joke'
 ]
 
+[plugins]
+sops = 'https://github.com/feniix/asdf-sops'
+
 [tools]
 age = '1.1.1'
 age-plugin-yubikey = '0.4.0'
