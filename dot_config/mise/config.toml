@@ -6,7 +6,7 @@ trusted_config_paths = [
 ]
 
 [plugins]
-sops = 'https://github.com/feniix/asdf-sops'
+sops = 'https://github.com/mise-plugins/mise-sops.git'
 
 [tools]
 age = '1.1.1'
