@@ -5,8 +5,9 @@ trusted_config_paths = [
     '~/Projects/joke'
 ]
 
-[plugins]
-sops = 'https://github.com/mise-plugins/mise-sops.git'
+[alias]
+sops = 'asdf:mise-plugins/mise-sops'
+skaffold = 'asdf:nklmilojevic/asdf-skaffold'
 
 [tools]
 age = '1.1.1'
@@ -55,3 +56,4 @@ tflint = '0.47.0'
 tfupdate = '0.7.2'
 xh = '0.23.0'
 yq = '4.44.3'
+usage = "latest"
