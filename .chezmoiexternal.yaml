@@ -1,6 +1,6 @@
 .local/bin/mise:
   type: file
-  url: https://github.com/jdx/mise/releases/download/v2024.10.13/mise-v2024.10.13-linux-x64
+  url: https://github.com/jdx/mise/releases/download/v2024.11.23/mise-v2024.11.23-linux-x64
   executable: true
 .local/bin/gopass-jsonapi:
   type: archive-file
