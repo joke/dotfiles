@@ -26,7 +26,7 @@ alias tg='nice -n 19 terragrunt'
 alias tgi='nice -n 19 terragrunt --terragrunt-non-interactive'
 alias tgid='nice -n 19 terragrunt --terragrunt-non-interactive --terragrunt-ignore-external-dependencies'
 
-setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histsavenodups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
+setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histignorespace histsavenodups histignorealldups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
 
 
 [[ -n $KUBIE_KUBECONFIG ]] && export AWS_PROFILE="$(yq -P '.users[0].user.exec.env[0].value' < $KUBIE_KUBECONFIG)"
