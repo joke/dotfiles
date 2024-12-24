@@ -56,4 +56,3 @@ tflint = '0.47.0'
 tfupdate = '0.7.2'
 xh = '0.23.0'
 yq = '4.44.3'
-usage = "latest"
