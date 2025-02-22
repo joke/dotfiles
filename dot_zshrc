@@ -1,3 +1,7 @@
+
+
+
+
 bindkey -e
 
 export LESS=-R
@@ -15,6 +19,12 @@ path=(~/.local/bin $path)
 # ------------------
 source $HOME/.zim/init.zsh
 
+# completions
+zstyle ':completion:*' expand suffix
+zstyle ':completion:*' ignore-parents parent pwd
+zstyle ':completion:*' list-suffixes true
+
+# aliases
 alias 'vim=nvim'
 alias -g ':G=| grep -E'
 alias -g ':g=| grep -E -i'

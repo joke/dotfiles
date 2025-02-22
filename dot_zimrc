@@ -18,7 +18,7 @@ zmodule joke/zim-starship
 zmodule joke/zim-steampipe
 zmodule joke/zim-yq
 zmodule completion
-zmodule zsh-users/zsh-completions --fpath src
+#zmodule zsh-users/zsh-completions --fpath src
 #zmodule zsh-users/zsh-syntax-highlighting
 #zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-history-substring-search
