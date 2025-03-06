@@ -1,60 +1,58 @@
 [settings]
 experimental = true
 not_found_auto_install = true
+disable_default_registry = true
 trusted_config_paths = [
-    '~/Projects/joke'
+  '~/Projects/joke'
+]
+disable_backends = [
+  "asdf"
 ]
 
-[alias]
-sops = 'asdf:mise-plugins/mise-sops'
-skaffold = 'asdf:nklmilojevic/asdf-skaffold'
-
 [tools]
-age = '1.1.1'
-age-plugin-yubikey = '0.4.0'
-apko = '0.17.0'
-asciidoctorj = '2.5.10'
-awscli = '2.13.3'
-chezmoi = '2.52.4'
-cosign = '2.2.3'
-dive = "0.12.0"
-elixir = '1.16.2-otp-26'
-erlang = '26.2.3'
-fzf = '0.37.0'
-github-cli = '2.22.1'
-glab = '1.34.0'
-gleam = '1.0.0'
-go = '1.21.6'
-gomplate = 'v3.11.5'
-gopass = '1.15.14'
-groovy = '4.0.10'
-helm = '3.16.2'
-istioctl = '1.23.2'
-java = 'temurin-21.0.0+35.0.LTS'
-k6 = '0.54.0'
-k9s = '0.26.7'
-kafkactl = '5.0.6'
-kn = '1.15.0'
-krew = '0.4.3'
-kubectl = '1.30.0'
-kubie = '0.24.0'
-loki-logcli = '3.0.0'
-maven = '3.8.7'
-mimirtool = '2.11.0'
-minikube = "1.35.0"
-node = 'lts'
-pre-commit = '4.0.1'
-shfmt = '3.7.0'
-skaffold = "2.14.1"
-sops = '3.9.1'
-starship = '1.21.1'
-steampipe = '0.24.2'
-terraform = '1.10.5'
-terraform-docs = '0.19.0'
-terragrunt = '0.72.9'
-tflint = '0.47.0'
-tfupdate = '0.7.2'
-xh = '0.23.0'
-yq = '4.44.3'
-buildpack = "0.36.4"
-kpack = "0.13.0"
+"aqua:aws/aws-cli" = "2.24.15"
+"aqua:hashicorp/terraform" = "1.11.0"
+"aqua:helm/helm" = "3.17.1"
+"aqua:kubectl" = "1.32.2"
+"aqua:pre-commit" = "4.1.0"
+java = "liberica-21.0.6+10"
+"ubi:aquaproj/aqua" = "2.45.0"
+"ubi:buildpacks-community/kpack-cli" = "0.13.0"
+"ubi:buildpacks/pack" = "0.36.4"
+"ubi:cli/cli" = { version = "2.67.0", exe = "gh" }
+"ubi:derailed/k9s" = "0.40.5"
+"ubi:deviceinsight/kafkactl" = "5.5.0"
+"ubi:ducaale/xh" = "0.24.0"
+"ubi:FiloSottile/age" = "1.2.1"
+"ubi:getsops/sops" = "3.9.1"
+"ubi:gleam-lang/gleam" = "v1.8.1"
+"ubi:GoogleContainerTools/skaffold" = "2.14.1"
+"ubi:gopasspw/gopass" = "1.15.15"
+"ubi:gopasspw/gopass-jsonapi" = "1.15.15"
+"ubi:grafana/k6" = "0.57.0"
+"ubi:grafana/mimir" = { version = "mimir-2.15.0", exe = "mimirtool", matching = "mimirtool" }
+"ubi:gruntwork-io/terragrunt" = "0.73.16"
+"ubi:houseabsolute/ubi" = "0.5.2"
+"ubi:istio/istio" = { version = "1.24.3", exe = "istioctl" }
+"ubi:jdx/usage" = "2.0.5"
+"ubi:junegunn/fzf" = "0.60.2"
+"ubi:knative/client" = { version = "knative-v1.17.0", rename_exe = "kn" }
+"ubi:knative-extensions/kn-plugin-admin" = "knative-v1.17.0"
+"ubi:knative-extensions/kn-plugin-event" = "knative-v1.17.0"
+"ubi:knative-extensions/kn-plugin-service-log" = "knative-v1.1.0"
+"ubi:knative-extensions/kn-plugin-source-kafka" = "knative-v1.17.0"
+"ubi:kubernetes/minikube" = "1.35.0"
+"ubi:mikefarah/yq" = "4.45.1"
+"ubi:minamijoyo/tfupdate" = "0.8.5"
+"ubi:mvdan/sh" = "3.10.0"
+"ubi:sbstp/kubie" = '0.25.0'
+"ubi:starship/starship" = "1.22.1"
+"ubi:str4d/age-plugin-yubikey" = "0.5.0"
+"ubi:synfinatic/aws-sso-cli" = "1.17.0"
+"ubi:terraform-docs/terraform-docs" = "0.19.0"
+"ubi:terraform-linters/tflint" = "0.55.1"
+"ubi:turbot/steampipe" = "1.0.3"
+"ubi:twpayne/chezmoi" = "2.60.0"
+"ubi:wagoodman/dive" = "0.12.0"
+"ubi:patrickdappollonio/kubectl-slice" = "1.4.1"
+"ubi:jdx/mise" = "2025.3.1"
