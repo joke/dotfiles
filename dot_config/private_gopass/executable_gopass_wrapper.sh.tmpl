@@ -1,5 +1,0 @@
-#!/bin/sh
-
-export GPG_TTY="$(tty)"
-exec {{ .chezmoi.homeDir }}/.local/bin/gopass-jsonapi listen
-
