@@ -17,7 +17,7 @@ fi
 
 echo "@@@@@@@@@@@ Starting chezmoi" >&2
 export BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
-sh -c "$(curl -fsLS https://chezmoi.io/get)" $ARGS
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- $ARGS
 rm -rf -- "$BINDIR"
 unset BINDIR
 echo "@@@@@@@@@@@ Finished chezmoi" >&2
