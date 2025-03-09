@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+#
+# .zimrc: {{ include "dot_zimrc" | sha256sum }}
+#
+
+echo "###################### start updating zim ######################"
+
+ZIM_HOME=$HOME/.zim
+ZIM="$(mise bin-paths ubi:zimfw/zimfw)/zimfw"
+
+source "$ZIM" uninstall -q
+source "$ZIM" install
+source "$ZIM" update
+
+echo "###################### done updating zim ######################"

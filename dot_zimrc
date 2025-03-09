@@ -1,1 +1,3 @@
 zmodule environment
+zmodule git
+zmodule input

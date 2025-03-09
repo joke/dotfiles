@@ -57,4 +57,5 @@ disable_backends = [
 "ubi:turbot/steampipe" = "1.0.3"
 "ubi:twpayne/chezmoi" = "2.60.0"
 "ubi:wagoodman/dive" = "0.12.0"
+"ubi:zimfw/zimfw" = { version = "v1.17.1", rename_exec = "zimfw.zsh" }
 java = "liberica-21"
