@@ -1,0 +1,15 @@
+.local/share/fonts/NerdFonts/FiraCode:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.tar.xz
+  include:
+  - 'FiraCodeNerdFont-*.ttf'
+.local/share/fonts/NerdFonts/JetBrainsMono:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
+  include:
+  - 'JetBrainsMonoNerdFont-*.ttf'
+.local/share/fonts/NerdFonts/SourceCodePro:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/SourceCodePro.tar.xz
+  include:
+  - 'SauceCodeProNerdFont-*.ttf'
