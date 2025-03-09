@@ -1,0 +1,38 @@
+bindkey -e
+
+export LESS=-R
+export EDITOR=nvim
+
+zstyle ':zim' disable-version-check yes
+HISTFILE=$HOME/.zhistory
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
+
+path=(~/.local/bin $path)
+
+# ------------------
+# Initialize modules
+# ------------------
+source $HOME/.zim/init.zsh
+
+# completions
+zstyle ':completion:*' expand suffix
+zstyle ':completion:*' ignore-parents parent pwd
+zstyle ':completion:*' list-suffixes true
+
+# aliases
+alias 'vim=nvim'
+alias -g ':G=| grep -E'
+alias -g ':g=| grep -E -i'
+for i ({1..10}) { alias -g ":c$i=| cut -f $i '-d '" }
+alias -g ':l1=| tail -n1'
+alias -g ':y=| yq -P'
+alias -g ':64=| base64 -d'
+alias tg='nice -n 19 terragrunt'
+alias tgi='nice -n 19 terragrunt --terragrunt-non-interactive'
+alias tgid='nice -n 19 terragrunt --terragrunt-non-interactive --terragrunt-ignore-external-dependencies'
+
+setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histignorespace histsavenodups histignorealldups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
+
+
+[[ -n $KUBIE_KUBECONFIG ]] && export AWS_PROFILE="$(yq -P '.users[0].user.exec.env[0].value' < $KUBIE_KUBECONFIG)"
