@@ -16,3 +16,8 @@ git:
   autoPush: true
 update:
   recurseSubmodules: true
+
+hooks:
+ add:
+   post:
+     script: chezmoi apply -v
