@@ -1,0 +1,7 @@
+/LICENSE
+/README.adoc
+
+{{ if ne .chezmoi.os "linux" }}
+.config/environment.d
+.config/systemd
+{{ end }}
