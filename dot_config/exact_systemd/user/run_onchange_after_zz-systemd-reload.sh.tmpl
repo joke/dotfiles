@@ -1,0 +1,10 @@
+#!/bin/sh
+
+{{ range (glob (joinPath .chezmoi.sourceDir "dot_config/systemd/user/**/*.service")) -}}
+# {{ . }}: {{ include . | sha256sum }}
+{{ end -}}
+{{ range (glob (joinPath .chezmoi.sourceDir "dot_config/systemd/user/**/*.timer")) -}}
+# {{ . }}: {{ include . | sha256sum }}
+{{ end -}}
+
+exec systemctl --user daemon-reload
