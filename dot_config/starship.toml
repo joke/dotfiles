@@ -1,0 +1,9 @@
+[kubernetes]
+disabled = false
+
+[status]
+disabled = false
+
+[sudo]
+disabled = false
+

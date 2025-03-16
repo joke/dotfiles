@@ -1,10 +1,13 @@
 #!/bin/sh
 
-{{ range (glob (joinPath .chezmoi.sourceDir "dot_config/systemd/user/**/*.service")) -}}
+{{- range (glob (joinPath .chezmoi.homeDir ".config/systemd/user/**/*.service")) }}
 # {{ . }}: {{ include . | sha256sum }}
-{{ end -}}
-{{ range (glob (joinPath .chezmoi.sourceDir "dot_config/systemd/user/**/*.timer")) -}}
+{{- end }}
+{{- range (glob (joinPath .chezmoi.homeDir ".config/systemd/user/**/*.socket")) }}
 # {{ . }}: {{ include . | sha256sum }}
-{{ end -}}
+{{- end }}
+{{- range (glob (joinPath .chezmoi.homeDir ".config/systemd/user/**/*.timer")) }}
+# {{ . }}: {{ include . | sha256sum }}
+{{- end }}
 
 exec systemctl --user daemon-reload
