@@ -13,6 +13,6 @@
 [updater]
         check = false
 [mounts]
-        path = {{ .chezmoi.pathSeparator }}{{ .group }}{{ .chezmoi.pathSeparator }}joke{{ .chezmoi.pathSeparator }}.local{{ .chezmoi.pathSeparator }}share{{ .chezmoi.pathSeparator }}{{ .chezmoi.config.gopass.command }}{{ .chezmoi.pathSeparator }}stores{{ .chezmoi.pathSeparator }}root
+        path = {{ joinPath .chezmoi.homeDir ".local/share/mise/gopass/stores/root" }}
 [show]
         autoclip = true
