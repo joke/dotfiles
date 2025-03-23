@@ -13,7 +13,8 @@ path=(~/.local/bin $path)
 # ------------------
 # Initialize modules
 # ------------------
-source $HOME/.zim/init.zsh
+ZIM_HOME="$HOME/.zim"
+source ${ZIM_HOME}/init.zsh
 
 # completions
 zstyle ':completion:*' expand suffix
