@@ -10,7 +10,7 @@ rm -rf "$HOME/.ssh/known_hosts"
 ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 
 ARGS="init joke --apply"
-[ -e "$SSH_CONNECTION" ] && ARGS="$ARGS --ssh"
+[ -n "$SSH_CONNECTION" ] && ARGS="$ARGS --ssh"
 
 export BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
 trap "rm -rf -- '$BINDIR'" EXIT
