@@ -1,29 +1,20 @@
 #!/bin/sh
+set -e
 
 export PATH="$HOME/.local/bin:$PATH"
 
-if [ ! -e "$HOME/.ssh" ]; then
-    echo "@@@@@@@@@@@ Creating ssh config directory" >&2
-    mkdir -m go= -p "$HOME/.ssh"
-fi
+echo "$(tput setaf 2 bold)****************************** -> setup dotfiles $(tput sgr0)"
 
-if [ ! -e "$HOME/.ssh/known_hosts" ]; then
-    echo "@@@@@@@@@@@ Adding github to known ssh hosts" >&2
-    ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
-fi
+mkdir -m go= -p "$HOME/.ssh"
+rm -rf "$HOME/.ssh/known_hosts"
+ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 
 ARGS="init joke --apply"
-if [ -e "$SSH_TTY" ]; then
-    echo "@@@@@@@@@@@ Cloning via ssh" >&2
-    ARGS="$ARGS --ssh"
-fi
+[ -e "$SSH_CONNECTION" ] && ARGS="$ARGS --ssh"
 
-echo "@@@@@@@@@@@ Starting chezmoi" >&2
 export BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
-sh -c "$(curl -fsLS https://get.chezmoi.io)" -- $ARGS
-rm -rf -- "$BINDIR"
-unset BINDIR
-echo "@@@@@@@@@@@ Finished chezmoi" >&2
+trap "rm -rf -- '$BINDIR'" EXIT
 
-echo "@@@@@@@@@@@ Restarting shell" >&2
-exec zsh
+sh -c "$(curl -fsLS https://get.chezmoi.io)" -- $ARGS
+
+echo "$(tput setaf 2 bold)****************************** <- setup dotfiles $(tput sgr0)"
