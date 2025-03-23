@@ -1,0 +1,13 @@
+[Unit]
+Description=update chezmoi dotfiles
+After=network-online.target
+
+[Service]
+Type=oneshot
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+ExecStartPre=-/usr/bin/notify-send -i folder-sync -u low -a chezmoi -e "Syncing" "Starting background synchroniation"
+ExecStart=%h/.local/share/mise/shims/chezmoi update -a -k --no-tty
+Restart=on-failure
+RestartSec=15min

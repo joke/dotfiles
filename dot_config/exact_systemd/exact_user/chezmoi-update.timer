@@ -1,0 +1,11 @@
+[Unit]
+Description=update chezmoi dotfiles
+Wants=network-online.target
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=15m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
