@@ -1,0 +1,7 @@
+#!/bin/sh
+set -ex
+cmd="curl -fsLS https://joke.github.io/dotfiles/ | "
+[ -n "$GITHUB_TOKEN" ] && cmd="$cmd GITHUB_TOKEN='$GITHUB_TOKEN' "
+cmd="$cmd sh"
+
+ssh -t "$1" "$cmd"
