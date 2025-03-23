@@ -3,8 +3,8 @@
 # config.toml: {{ include "dot_config/mise/config.toml" | sha256sum }}
 set -e
 
-echo "$(tput setaf 2 bold)****************************** -> bootstrapping mise$(tput sgr0)"
+echo "$(tput setaf 2 bold)****************************** -> running mise install $(tput sgr0)"
 
 mise install -y
 
-echo "$(tput setaf 2 bold)****************************** <- bootstrapping mise$(tput sgr0)"
+echo "$(tput setaf 2 bold)****************************** <- running mise install $(tput sgr0)"
