@@ -1,10 +1,9 @@
 #!/bin/sh
+set -e
 
-echo "###################### start install git hooks in chezmoi dir ######################"
-set -ex
+echo "$(tput setaf 2 bold)****************************** <- setup chezmoi git hook$(tput sgr0)"
 
 rm -rf {{ joinPath .chezmoi.sourceDir ".git/hooks" | quote }}
 cp -a {{ joinPath .chezmoi.homeDir ".git-template/hooks" | quote }} {{ joinPath .chezmoi.sourceDir ".git/hooks" | quote }}
 
-set +ex
-echo "###################### done install git hooks in chezmoi dir ######################"
+echo "$(tput setaf 2 bold)****************************** -> setup chezmoi git hook$(tput sgr0)"

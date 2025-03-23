@@ -1,11 +1,11 @@
 #!/bin/sh
-
 #
 # .zimrc: {{ include "dot_zimrc" | sha256sum }}
 # zimfw: {{ include (joinPath .chezmoi.homeDir ".local/share/mise/installs/ubi-zimfw-zimfw/latest/zimfw") | sha256sum }}
 #
+set -e
 
-echo "###################### start updating zim ######################"
+echo "$(tput setaf 2 bold)****************************** -> updating zimfw$(tput sgr0)"
 
 export \
   ZIM_HOME="{{ joinPath .chezmoi.homeDir ".zim" }}" \
@@ -17,4 +17,4 @@ source "$ZIM" install
 source "$ZIM" update
 EOF
 
-echo "###################### done updating zim ######################"
+echo "$(tput setaf 2 bold)****************************** <- updating zimfw$(tput sgr0)"

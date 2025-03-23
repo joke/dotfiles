@@ -1,10 +1,10 @@
 #!/bin/sh
+set -e
 
 # mise already installed
 command -v mise >/dev/null 2>&1 && exit 0
 
 echo "###################### start bootstrapping mise ######################"
-set -ex
 
 wget="$(command -v wget 2>/dev/null)"
 curl="$(command -v curl 2>/dev/null)"
@@ -27,5 +27,4 @@ fi
 "$MISE_INSTALL_PATH" use -g ubi:jdx/mise[matching=musl]@latest
 ln -sf ../share/mise/installs/ubi-jdx-mise/latest/mise "$HOME/.local/bin/mise"
 
-set +ex
 echo "###################### done bootstrapping mise ######################"
