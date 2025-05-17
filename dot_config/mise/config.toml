@@ -33,6 +33,7 @@ disable_backends = [
 "ubi:gruntwork-io/terragrunt" = "0.76.6"
 "ubi:houseabsolute/ubi" = "0.6.1"
 "ubi:istio/istio" = { version = "1.25.0", exe = "istioctl" }
+"ubi:JanDeDobbeleer/oh-my-posh" = "25.23.0"
 "ubi:jdx/mise" = "2025.3.7"
 "ubi:jdx/usage" = "2.0.6"
 "ubi:junegunn/fzf" = "0.60.3"

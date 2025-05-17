@@ -14,7 +14,8 @@ zmodule joke/zim-kn
 zmodule joke/zim-kubectl
 zmodule joke/zim-minikube
 zmodule joke/zim-skaffold
-zmodule joke/zim-starship
+#zmodule joke/zim-starship
+zmodule joke/zim-oh-my-posh
 zmodule joke/zim-steampipe
 zmodule joke/zim-yq
 zmodule completion
