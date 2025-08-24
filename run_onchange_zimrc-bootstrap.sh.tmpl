@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#
+# .zimrc: {{ include "dot_zimrc" | sha256sum }}
+# zimfw: {{ include (joinPath .chezmoi.homeDir ".local/share/mise/installs/ubi-zimfw-zimfw/latest/zimfw") | sha256sum }}
+#
+
+echo "###################### start updating zim ######################"
+
+export \
+  ZIM_HOME="{{ joinPath .chezmoi.homeDir ".zim" }}" \
+  ZIM="{{ joinPath .chezmoi.homeDir ".local/share/mise/installs/ubi-zimfw-zimfw/latest/zimfw" }}"
+
+zsh << EOF
+source "$ZIM" uninstall -q
+source "$ZIM" install
+source "$ZIM" update
+EOF
+
+echo "###################### done updating zim ######################"
