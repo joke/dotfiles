@@ -24,7 +24,7 @@ else
   echo "Neither curl nor wget detected" >&2
 fi
 
-"$MISE_INSTALL_PATH" use -g githuab:jdx/mise@latest
+"$MISE_INSTALL_PATH" "MISE_EXPERIMENTAL=true" use -g github:jdx/mise@latest
 ln -sf ../share/mise/installs/github-jdx-mise/latest/mise "$HOME/.local/bin/mise"
 
 set +ex
