@@ -16,4 +16,4 @@ disable_backends = [
 "github:junegunn/fzf" = "0.64.0"
 "github:starship/starship" = "1.23.0"
 "github:twpayne/chezmoi" = "2.63.0"
-"github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw.zsh" }
+"github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw" }
