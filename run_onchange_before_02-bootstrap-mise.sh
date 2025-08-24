@@ -11,6 +11,7 @@ curl="$(command -v curl 2>/dev/null)"
 
 export \
   MISE_INSTALL_HELP=0 \
+  MISE_EXPERIMENTAL=true \
   MISE_INSTALL_PATH="$HOME/.local/bin/mise" \
   PATH="$HOME/.local/bin:$PATH"
 
