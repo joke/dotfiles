@@ -10,60 +10,12 @@ disable_backends = [
 ]
 
 [tools]
-erlang = "28.0"
-java = "oracle-graalvm-24.0.2"
-python = "latest"
 
-"aqua:aws/aws-cli" = "2.27.53"
-"aqua:hashicorp/terraform" = "1.12.2"
-"aqua:helm/helm" = "3.18.4"
-"aqua:kubectl" = "1.33.3"
-"aqua:pre-commit" = "4.2.0"
-
-"github:aquaproj/aqua" = "2.53.4"
-"github:buildpacks-community/kpack-cli" = "0.13.0"
-"github:buildpacks/pack" = "0.38.2"
-"github:derailed/k9s" = "0.50.9"
-"github:deviceinsight/kafkactl" = "5.11.0"
-"github:ducaale/xh" = "0.24.1"
-#"github:FiloSottile/age" = { version = "1.2.1", bin = "age" }
-"github:getsops/sops" = "3.10.2"
-"github:gleam-lang/gleam" = "1.12.0"
-"github:GoogleContainerTools/skaffold" = "2.16.1"
-"github:gopasspw/gopass" = "1.15.16"
-"github:gopasspw/gopass-jsonapi" = "1.15.16"
-"github:grafana/k6" = "1.1.0"
-"github:gruntwork-io/terragrunt" = "0.83.2"
-"github:houseabsolute/ubi" = "0.7.2"
-"github:istio/istio" = "1.26.2"
-"github:JanDeDobbeleer/oh-my-posh" = "26.16.0"
 "github:jdx/mise" = "2025.8.20"
 "github:jdx/usage" = "2.2.2"
 "github:junegunn/fzf" = "0.64.0"
-"github:knative/client" = { version = "knative-v1.17.0", bin = "kn" }
-"github:knative-extensions/kn-plugin-admin" = "knative-v1.17.0"
-"github:knative-extensions/kn-plugin-event" = "knative-v1.17.0"
-"github:knative-extensions/kn-plugin-service-log" = "knative-v1.1.0"
-"github:knative-extensions/kn-plugin-source-kafka" = "knative-v1.17.0"
-"github:kubernetes/minikube" = "1.36.0"
-"github:mikefarah/yq" = "4.46.1"
-"github:minamijoyo/tfupdate" = "0.9.1"
-"github:mk-5/fjira" = "1.4.4"
-"github:mvdan/sh" = "3.12.0"
-"github:patrickdappollonio/kubectl-slice" = "1.4.2"
-"github:sbstp/kubie" = "0.26.0"
 "github:starship/starship" = "1.23.0"
-"github:str4d/age-plugin-yubikey" = "0.5.0"
-#"github:str4d/rage" = "0.11.1"
-"github:synfinatic/aws-sso-cli" = "2.0.3"
-"github:terraform-docs/terraform-docs" = "0.20.0"
-"github:terraform-linters/tflint" = "0.58.1"
-"github:turbot/steampipe" = "2.1.0"
 "github:twpayne/chezmoi" = "2.63.0"
-"github:wagoodman/dive" = "0.13.1"
-"github:cli/cli" = "2.75.1"
 "github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw.zsh" }
-
-#"ubi:zimfw/zimfw" = { version = "1.18.0", rename_exec = "zimfw.zsh" }
 
 "npm:ergogen" = "latest"
