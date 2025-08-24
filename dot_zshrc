@@ -4,6 +4,7 @@ export LESS=-R
 export EDITOR=nvim
 
 zstyle ':zim' disable-version-check yes
+ZIM_HOME=$HOME/.zim
 HISTFILE=$HOME/.zhistory
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
