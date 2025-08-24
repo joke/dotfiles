@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "###################### start install git hooks in chezmoi dir ######################"
+set -ex
+
+rm -rf {{ joinPath .chezmoi.sourceDir ".git/hooks" | quote }}
+cp -a {{ joinPath .chezmoi.homeDir ".git-template/hooks" | quote }} {{ joinPath .chezmoi.sourceDir ".git/hooks" | quote }}
+
+set +ex
+echo "###################### done install git hooks in chezmoi dir ######################"

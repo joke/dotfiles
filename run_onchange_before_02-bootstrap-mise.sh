@@ -12,7 +12,6 @@ curl="$(command -v curl 2>/dev/null)"
 export \
   MISE_INSTALL_HELP=0 \
   MISE_INSTALL_PATH="$HOME/.local/bin/mise" \
-  MISE_EXPERIMENTAL=true \
   PATH="$HOME/.local/bin:$PATH"
 
 mkdir -p "$HOME/.local/bin"
@@ -25,8 +24,8 @@ else
   echo "Neither curl nor wget detected" >&2
 fi
 
- "$MISE_INSTALL_PATH" use -g github:jdx/mise@latest
-ln -sf ../share/mise/installs/github-jdx-mise/latest/bin/mise "$HOME/.local/bin/mise"
+"$MISE_INSTALL_PATH" use -g ubi:jdx/mise[matching=musl]@latest
+ln -sf ../share/mise/installs/ubi-jdx-mise/latest/mise "$HOME/.local/bin/mise"
 
 set +ex
 echo "###################### done bootstrapping mise ######################"
