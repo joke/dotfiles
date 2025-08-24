@@ -26,7 +26,7 @@ else
 fi
 
  "$MISE_INSTALL_PATH" use -g github:jdx/mise@latest
-ln -sf ../share/mise/installs/github-jdx-mise/latest/mise "$HOME/.local/bin/mise"
+ln -sf ../share/mise/installs/github-jdx-mise/latest/bin/mise "$HOME/.local/bin/mise"
 
 set +ex
 echo "###################### done bootstrapping mise ######################"
