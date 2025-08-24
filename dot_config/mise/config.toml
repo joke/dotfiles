@@ -17,5 +17,3 @@ disable_backends = [
 "github:starship/starship" = "1.23.0"
 "github:twpayne/chezmoi" = "2.63.0"
 "github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw.zsh" }
-
-"npm:ergogen" = "latest"
