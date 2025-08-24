@@ -10,10 +10,52 @@ disable_backends = [
 ]
 
 [tools]
-
-"github:jdx/mise" = "2025.8.20"
-"github:jdx/usage" = "2.2.2"
-"github:junegunn/fzf" = "0.64.0"
-"github:starship/starship" = "1.23.0"
-"github:twpayne/chezmoi" = "2.63.0"
-"github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw" }
+"aqua:aws/aws-cli" = "2.24.15"
+"aqua:hashicorp/terraform" = "1.11.0"
+"aqua:helm/helm" = "3.17.1"
+"aqua:kubectl" = "1.32.2"
+"aqua:pre-commit" = "4.1.0"
+"ubi:GoogleContainerTools/skaffold" = "2.14.1"
+"ubi:age-sops/age" = "1.90.1"
+"ubi:aquaproj/aqua" = "2.45.0"
+"ubi:buildpacks-community/kpack-cli" = "0.13.0"
+"ubi:buildpacks/pack" = "0.36.4"
+"ubi:cli/cli" = { version = "2.67.0", exe = "gh" }
+"ubi:derailed/k9s" = "0.40.5"
+"ubi:deviceinsight/kafkactl" = "5.5.0"
+"ubi:ducaale/xh" = "0.24.0"
+"ubi:getsops/sops" = "3.9.1"
+"ubi:gleam-lang/gleam" = "v1.8.1"
+"ubi:gopasspw/gopass" = "1.15.15"
+"ubi:gopasspw/gopass-jsonapi" = "1.15.15"
+"ubi:grafana/k6" = "0.57.0"
+"ubi:grafana/mimir" = { version = "mimir-2.15.0", exe = "mimirtool", matching = "mimirtool" }
+"ubi:gruntwork-io/terragrunt" = "0.73.16"
+"ubi:houseabsolute/ubi" = "0.5.2"
+"ubi:istio/istio" = { version = "1.24.3", exe = "istioctl" }
+"ubi:jdx/mise" = "2025.3.2"
+"ubi:jdx/usage" = "2.0.5"
+"ubi:junegunn/fzf" = "0.60.2"
+"ubi:knative-extensions/kn-plugin-admin" = "knative-v1.17.0"
+"ubi:knative-extensions/kn-plugin-event" = "knative-v1.17.0"
+"ubi:knative-extensions/kn-plugin-service-log" = "knative-v1.1.0"
+"ubi:knative-extensions/kn-plugin-source-kafka" = "knative-v1.17.0"
+"ubi:knative/client" = { version = "knative-v1.17.0", rename_exe = "kn" }
+"ubi:kubernetes/minikube" = "1.35.0"
+"ubi:mikefarah/yq" = "4.45.1"
+"ubi:minamijoyo/tfupdate" = "0.8.5"
+"ubi:mk-5/fjira" = "1.4.4"
+"ubi:mvdan/sh" = "3.10.0"
+"ubi:patrickdappollonio/kubectl-slice" = "1.4.1"
+"ubi:sbstp/kubie" = '0.25.0'
+"ubi:starship/starship" = "1.22.1"
+"ubi:str4d/age-plugin-yubikey" = "0.5.0"
+"ubi:str4d/rage" = "0.11.1"
+"ubi:synfinatic/aws-sso-cli" = "1.17.0"
+"ubi:terraform-docs/terraform-docs" = "0.19.0"
+"ubi:terraform-linters/tflint" = "0.55.1"
+"ubi:turbot/steampipe" = "1.0.3"
+"ubi:twpayne/chezmoi" = "2.60.0"
+"ubi:wagoodman/dive" = "0.12.0"
+"ubi:zimfw/zimfw" = { version = "v1.18.0", rename_exec = "zimfw.zsh" }
+java = "liberica-21"

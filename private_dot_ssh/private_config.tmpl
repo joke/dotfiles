@@ -1,0 +1,19 @@
+Host github.com
+ForwardAgent no
+
+Host i-* mi-*
+User ec2-user
+ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+
+Host *
+AddKeysToAgent yes
+ControlMaster auto
+{{- if eq .chezmoi.os "linux" }}
+ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
+{{- else if eq .chezmoi.os "darwin" }}
+ControlPath ${TMPDIR}/.ssh_%C
+{{- end }}
+ControlPersist 1800
+ForwardAgent yes
+ServerAliveInterval 60
+StrictHostKeychecking accept-new
