@@ -24,8 +24,8 @@ else
   echo "Neither curl nor wget detected" >&2
 fi
 
-"$MISE_INSTALL_PATH" use -g ubi:jdx/mise[matching=musl]@latest
-ln -sf ../share/mise/installs/ubi-jdx-mise/latest/mise "$HOME/.local/bin/mise"
+"$MISE_INSTALL_PATH" use -g githuab:jdx/mise@latest
+ln -sf ../share/mise/installs/github-jdx-mise/latest/mise "$HOME/.local/bin/mise"
 
 set +ex
 echo "###################### done bootstrapping mise ######################"
