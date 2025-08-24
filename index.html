@@ -9,7 +9,7 @@ mkdir -m go= -p "$HOME/.ssh"
 rm -rf "$HOME/.ssh/known_hosts"
 ssh-keyscan github.com 2>/dev/null > "$HOME/.ssh/known_hosts"
 
-ARGS="init joke --apply"
+ARGS="init joke --apply --branch rework3"
 [ -n "$SSH_CONNECTION" ] && ARGS="$ARGS --ssh"
 
 export BINDIR="$(mktemp -d -t chezmoi.XXXXXXXX)"
