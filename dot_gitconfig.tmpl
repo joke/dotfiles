@@ -1,0 +1,73 @@
+[user]
+        email = {{ .email | quote }}
+        name = Joke de Buhr
+        signingkey = 0x86AA80787A77AAD9
+[commit]
+        gpgSign = true
+[pull]
+        rebase = interactive
+[alias]
+        loggs = log --graph --stat
+        pushf = push --force-with-lease --force-if-includes
+[log]
+        decorate = auto
+        follow = true
+#        showSignature = true
+[merge]
+        autoStash = true
+        directoryRenames = true
+        log = true
+[diff]
+        algorithm = histogram
+        renames = copies
+[push]
+        autoSetupRemote = true
+        default = current
+        followTags = true
+        recurseSubmodules = on-demand
+        useForceIfIncludes = true
+	pushOption = merge_request.create
+	pushOption = merge_request.merge_when_pipeline_succeeds
+	pushOption = merge_request.remove_source_branch
+[rebase]
+        abbreviateCommands = true
+        autoSquash = true
+        autoStash = true
+	missingCommitsCheck = error
+        stat = true
+        updateRefs = true
+[submodule]
+        recurse = true
+[tag]
+        gpgSign = true
+[branch]
+        autoSetupRebase = remote
+[checkout]
+        defaultRemote = origin
+        guess = true
+[init]
+        defaultBranch = main
+        templateDir = {{ joinPath .chezmoi.homeDir ".git-template" | quote }}
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+[rerere]
+        enabled = true
+        autoUpdate = true
+[grep]
+        lineNumber = true
+        patternType = perl
+[fetch]
+        recurseSubmodules = on-demand
+        prune = true
+        pruneTags = true
+        writeCommitGraph = true
+[advice]
+        skippedCherryPicks = false
+[status]
+       showStash = true
+       renames = copy
+[diff "sopsdiffer"]
+	textconv = sops --decrypt
