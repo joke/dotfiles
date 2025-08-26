@@ -27,7 +27,7 @@ python = "latest"
 "github:deviceinsight/kafkactl" = "5.11.1"
 "github:ducaale/xh" = "0.24.1"
 #"github:FiloSottile/age" = { version = "1.2.1", bin = "age" }
-"github:getsops/sops" = "3.10.2"
+"github:getsops/sops" =  { version = "3.10.2", bin = "sops" }
 "github:gleam-lang/gleam" = "1.12.0"
 "github:GoogleContainerTools/skaffold" = "2.16.1"
 "github:gopasspw/gopass" = "1.15.16"
@@ -45,8 +45,8 @@ python = "latest"
 "github:knative-extensions/kn-plugin-event" = "knative-v1.17.0"
 "github:knative-extensions/kn-plugin-service-log" = "knative-v1.1.0"
 "github:knative-extensions/kn-plugin-source-kafka" = "knative-v1.17.0"
+"github:mikefarah/yq" = { version = "4.47.1", bin = "yq", "platforms" = { linux-arm64 = { asset_pattern = "yq_linux_arm64" }, linux-x64 = { asset_pattern = "yq_linux_amd64" }, macos-arm64 = { asset_pattern = "yq_darwin_arm64" } } }
 "github:kubernetes/minikube" = "1.36.0"
-"github:mikefarah/yq" = "4.47.1"
 "github:minamijoyo/tfupdate" = "0.9.2"
 "github:mk-5/fjira" = "1.4.4"
 "github:mvdan/sh" = "3.12.0"
@@ -66,4 +66,3 @@ python = "latest"
 
 #"ubi:zimfw/zimfw" = { version = "1.18.0", rename_exec = "zimfw.zsh" }
 
-"npm:ergogen" = "latest"
