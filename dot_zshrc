@@ -14,7 +14,7 @@ path=(~/.local/bin $path)
 # ------------------
 # Initialize modules
 # ------------------
-source $HOME/.zim/init.zsh
+source ${ZIM_HOME}/init.zsh
 
 # completions
 zstyle ':completion:*' expand suffix
@@ -30,8 +30,8 @@ alias -g ':l1=| tail -n1'
 alias -g ':y=| yq -P'
 alias -g ':64=| base64 -d'
 alias tg='nice -n 19 terragrunt'
-alias tgi='nice -n 19 terragrunt --terragrunt-non-interactive'
-alias tgid='nice -n 19 terragrunt --terragrunt-non-interactive --terragrunt-ignore-external-dependencies'
+alias tgi='nice -n 19 terragrunt --non-interactive'
+alias tgid='nice -n 19 terragrunt --non-interactive --terragrunt-ignore-external-dependencies'
 
 setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber histfcntllock histignorespace histsavenodups histignorealldups histlexwords histnostore histreduceblanks noincappendhistory noincappendhistorytime sharehistory numericglobsort rcexpandparam rematchpcre extendedglob extendedhistory
 
