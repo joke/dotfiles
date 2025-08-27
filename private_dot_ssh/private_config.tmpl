@@ -11,7 +11,7 @@ ControlMaster auto
 {{- if eq .chezmoi.os "linux" }}
 ControlPath ${XDG_RUNTIME_DIR}/.ssh_%C
 {{- else if eq .chezmoi.os "darwin" }}
-ControlPath ${TMPDIR}/.ssh_%C
+ControlPath /tmp/.ssh_%C
 {{- end }}
 ControlPersist 1800
 ForwardAgent yes
