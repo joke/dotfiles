@@ -26,15 +26,15 @@
         followTags = true
         recurseSubmodules = on-demand
         useForceIfIncludes = true
-	pushOption = merge_request.create
-	pushOption = merge_request.auto_merge
-	pushOption = merge_request.merge_when_pipeline_succeeds
-	pushOption = merge_request.remove_source_branch
+        pushOption = merge_request.create
+        pushOption = merge_request.auto_merge
+        pushOption = merge_request.merge_when_pipeline_succeeds
+        pushOption = merge_request.remove_source_branch
 [rebase]
         abbreviateCommands = true
         autoSquash = true
         autoStash = true
-	missingCommitsCheck = error
+        missingCommitsCheck = error
         stat = true
         updateRefs = true
 [submodule]
@@ -71,4 +71,4 @@
        showStash = true
        renames = copy
 [diff "sopsdiffer"]
-	textconv = sops --decrypt
+        textconv = sops --decrypt
