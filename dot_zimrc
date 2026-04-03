@@ -5,3 +5,4 @@ zmodule termtitle
 zmodule utility
 zmodule joke/zim-mise
 zmodule joke/zim-chezmoi
+zmodule joke/zim-starship

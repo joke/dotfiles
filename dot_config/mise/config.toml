@@ -4,5 +4,7 @@
 "github:gopasspw/gopass-jsonapi" = "1.16.1"
 "github:jdx/mise" = "2026.4.3"
 "github:jdx/usage" = "3.2.0"
+"github:starship/starship" = "1.24.2"
 "github:twpayne/chezmoi" = "2.70.0"
 "github:zimfw/zimfw" = { version = "1.20.0", asset_pattern = "zimfw.zsh", bin = "zimfw" }
+
