@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+ssh -t -A "GITHUB_TOKEN=$GITHUB_TOKEN curl -fsLS https://joke.github.io/dotfiles/ | sh"
+
