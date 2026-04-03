@@ -1,6 +1,6 @@
 [settings]
+
 experimental = true
-not_found_auto_install = true
 disable_default_registry = true
 trusted_config_paths = [
   '{{ .chezmoi.homeDir }}'
@@ -8,3 +8,6 @@ trusted_config_paths = [
 disable_backends = [
   "asdf"
 ]
+
+[settings.sops]
+rops = false
