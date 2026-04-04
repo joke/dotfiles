@@ -1,13 +1,2 @@
-[settings]
-
-experimental = true
-disable_default_registry = true
-trusted_config_paths = [
-  '{{ .chezmoi.homeDir }}'
-]
-disable_backends = [
-  "asdf"
-]
-
-[settings.sops]
-rops = false
+[plugins]
+fnox-env = "https://github.com/jdx/mise-env-fnox"
