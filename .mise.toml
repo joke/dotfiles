@@ -1,5 +1,6 @@
 [tools]
 "github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw" }
+"github:starship/starship" = "1.23.0"
 
 [dotfiles]
 "~/.zimrc" = { source = "dotfiles/zimrc" }
