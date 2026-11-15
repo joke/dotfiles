@@ -1,3 +1,18 @@
+[tools]
+"github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw" }
+
 [dotfiles]
 "~/.zimrc" = { source = "dotfiles/zimrc" }
 "~/.zshrc" = { source = "dotfiles/zshrc" }
+
+[bootstrap.hooks.post-tools]
+description = "Install and update Zim modules when .zimrc changes"
+run = '''
+state="${XDG_STATE_HOME:-$HOME/.local/state}/dotfiles/zimrc.sha256"
+sum=$(sha256sum ~/.zimrc | cut -d' ' -f1)
+if [ "$(cat "$state" 2>/dev/null)" != "$sum" ]; then
+  zimfw="$(mise which zimfw)"
+  zsh -c 'source "$1" install -q && source "$1" update -q' zsh "$zimfw" &&
+    mkdir -p "$(dirname "$state")" && echo "$sum" > "$state"
+fi
+'''
