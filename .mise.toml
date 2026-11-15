@@ -1,0 +1,3 @@
+[dotfiles]
+"~/.zimrc" = { source = "dotfiles/zimrc" }
+"~/.zshrc" = { source = "dotfiles/zshrc" }
