@@ -30,3 +30,9 @@ if [ "$(cat "$state" 2>/dev/null)" != "$sum" ]; then
     mkdir -p "$(dirname "$state")" && echo "$sum" > "$state"
 fi
 '''
+
+[dotfiles."~/Projects/joke/mise.toml"]
+content = """
+[env]
+EMAIL = "joke@xckk.de"
+"""
