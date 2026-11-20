@@ -18,6 +18,7 @@ disable_backends = [
 "~/.zimrc" = { source = "dotfiles/zimrc" }
 "~/.zshrc" = { source = "dotfiles/zshrc" }
 "~/.gitconfig" = { source = "dotfiles/gitconfig" }
+"~/Projects/joke/mise.toml" = { source = "dotfiles/projects-joke-mise.toml" }
 
 [bootstrap.hooks.post-tools]
 description = "Install and update Zim modules when .zimrc changes"
@@ -30,9 +31,3 @@ if [ "$(cat "$state" 2>/dev/null)" != "$sum" ]; then
     mkdir -p "$(dirname "$state")" && echo "$sum" > "$state"
 fi
 '''
-
-[dotfiles."~/Projects/joke/mise.toml"]
-content = """
-[env]
-EMAIL = "joke@xckk.de"
-"""
