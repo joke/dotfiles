@@ -17,6 +17,7 @@ disable_backends = [
 [dotfiles]
 "~/.zimrc" = { source = "dotfiles/zimrc" }
 "~/.zshrc" = { source = "dotfiles/zshrc" }
+"~/.gitconfig" = { source = "dotfiles/gitconfig" }
 
 [bootstrap.hooks.post-tools]
 description = "Install and update Zim modules when .zimrc changes"
