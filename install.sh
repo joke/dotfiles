@@ -9,3 +9,9 @@ mise bootstrap \
   --update \
   --force-dotfiles \
   --yes
+
+# Piped installs (curl | sh) read the script from stdin, so reattach the
+# terminal before handing over to the new zsh.
+if command -v zsh >/dev/null 2>&1 && [ -r /dev/tty ]; then
+  exec zsh -l </dev/tty
+fi
