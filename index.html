@@ -4,12 +4,14 @@ set -eu
 export PATH="$HOME/.local/bin:$PATH"
 command -v mise >/dev/null 2>&1 || curl -fsSL https://mise.run | sh
 
+export MISE_CONFIG_DIR="$HOME/Projects/joke/dotfiles"
 mise bootstrap \
   --adopt joke/dotfiles \
-  --config-dir Projects/joke \
   --update \
   --force-dotfiles \
   --yes
+mkdir -p "$HOME/.config"
+ln -sf "$HOME/Projects/joke/dotfiles" "$HOME/.config/mise"
 
 # Piped installs (curl | sh) read the script from stdin, so reattach the
 # terminal before handing over to the new zsh.
