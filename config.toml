@@ -15,10 +15,7 @@ disable_backends = [
 "github:starship/starship" = "1.23.0"
 
 [dotfiles]
-"~/.zimrc" = { source = "dotfiles/zimrc" }
-"~/.zshrc" = { source = "dotfiles/zshrc" }
-"~/.gitconfig" = { source = "dotfiles/gitconfig" }
-"~/Projects/joke/mise.toml" = { source = "dotfiles/projects-joke-mise.toml" }
+"~" = { source = "dotfiles", mode = "symlink-each", manifest = "git" }
 
 [bootstrap.hooks.post-tools]
 description = "Install and update Zim modules when .zimrc changes"
