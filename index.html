@@ -6,6 +6,7 @@ command -v mise >/dev/null 2>&1 || curl -fsSL https://mise.run | sh
 
 mise bootstrap \
   --adopt joke/dotfiles \
+  --config-dir Projects/joke \
   --update \
   --force-dotfiles \
   --yes
