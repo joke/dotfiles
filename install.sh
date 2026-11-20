@@ -5,9 +5,7 @@ export PATH="$HOME/.local/bin:$PATH"
 command -v mise >/dev/null 2>&1 || curl -fsSL https://mise.run | sh
 
 mise bootstrap \
-  --from git@github.com:joke/dotfiles.git \
-  --from-dir "$HOME/Projects/joke/dotfiles" \
-  --config-dir .config/mise \
+  --adopt joke/dotfiles \
   --update \
   --force-dotfiles \
   --yes
