@@ -1,4 +1,4 @@
 [bootstrap.hooks.post-tools]
 run = [
-  "mise exec -c 'zsh $(which zimfw) reinstall'"
+  "mise exec -c 'zsh $(which zimfw) install'"
 ]
