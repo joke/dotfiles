@@ -1,0 +1,7 @@
+[tools]
+"github:jdx/mise" = "2026.11.8"
+"github:zimfw/zimfw" = { version = "1.18.0", asset_pattern = "zimfw.zsh", bin = "zimfw" }
+"github:starship/starship" = "1.23.0"
+
+[dotfiles]
+"~" = { source = "dotfiles", mode = "symlink-each", manifest = "git" }

@@ -1,0 +1,2 @@
+[dotfiles]
+"~" = { source = "dotfiles", mode = "symlink-each", manifest = "git" }
