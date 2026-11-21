@@ -4,7 +4,6 @@ export LESS=-R
 export EDITOR=nvim
 
 zstyle ':zim' disable-version-check yes
-ZIM_HOME=$HOME/.zim
 HISTFILE=$HOME/.zhistory
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
@@ -37,12 +36,3 @@ setopt autonamedirs bgnice checkjobs globassign globstarshort histallowclobber h
 
 
 [[ -n $KUBIE_KUBECONFIG ]] && export AWS_PROFILE="$(yq -P '.users[0].user.exec.env[0].value' < $KUBIE_KUBECONFIG)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/joke/.lmstudio/bin"
-# End of LM Studio CLI section
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
